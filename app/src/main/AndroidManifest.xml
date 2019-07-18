@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hd.wallpaper.background">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application
+        android:name=".Activity.WallpaperApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Activity.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.PhotoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".Activity.FeaturedPhotoActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".Activity.PhotoGrapherActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".Activity.PhotographerPhotosActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".Activity.PhotographerLikedPhotosActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".Activity.PhotosCollectionActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".Activity.PhotographerCollectionActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <service
+            android:name="com.novoda.merlin.MerlinService"
+            android:exported="false" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/fileprovider" />
+        </provider>
+
+        <!--<receiver android:name=".Fragment.FeaturedFragment" />-->
+
+        <activity
+            android:name="Activity.SplashScreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_splash_screen"
+            android:theme="@style/FullscreenTheme">
+
+        </activity>
+    </application>
+
+</manifest>

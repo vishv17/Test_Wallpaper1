@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Screen Splash - HD Wallpaper</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="unsplash_image">Unsplash Image</string>
+    <string name="share_via">Share via</string>
+    <string name="unknown">Unknown</string>
+    <string name="unsplash_collection">Unsplash Collection</string>
+    <string name="error">Error</string>
+
+    <string name="set_as_wallpaper">Set as wallpaper</string>
+
+    <string name="setting_wallpaper">Setting wallpaper&#8230;</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>
